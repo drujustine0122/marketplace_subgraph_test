@@ -1,1 +1,1 @@
-# marketplace_subgraph_test
+# smart-contracts

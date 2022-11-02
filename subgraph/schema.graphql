@@ -1,0 +1,17 @@
+type ListedItem @Entity {
+    id: ID!
+    nftaddress: String!
+    seller: String!
+    price: BigInt!
+    sold: Boolean!
+    cancelled: Boolean!
+}
+
+type BuyHistory @Entity {
+    id: ID!
+    tokenId: String!
+    seller: String!
+    buyer: String!
+    price: BigInt!
+    timestamp: BigInt!
+}
