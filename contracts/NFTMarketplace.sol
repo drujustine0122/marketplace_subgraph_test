@@ -80,6 +80,7 @@ contract NFTMarketplace is ReentrancyGuard, Ownable {
         isListed(NFTAddress, tokenId)
     {
         delete (listings[NFTAddress][tokenId]);
+        IERC721(NFTAddress).transferFrom(address(this), msg.sender, tokenId);
         emit ItemCancelled(NFTAddress, tokenId);
     }
 
